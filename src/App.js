@@ -1,10 +1,12 @@
 import React from 'react'
-import Topnav from './components/topnav'
+
+import Footer from './components/footer'
 
 const App = () => {
   return (
    <>
-   <Topnav/>
+
+   <Footer/>
    </>
   )
 }
