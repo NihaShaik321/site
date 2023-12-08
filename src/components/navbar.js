@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
 
-const navbar = () => {
-  return (
-    <div>navbar</div>
-  )
-}
-
-export default navbar
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
@@ -69,8 +59,12 @@ const Navbar = () => {
           <ul className='flex flex-col md:flex-row items-center md:items-baseline md:space-x-4'>
             <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/' onClick={toggleMenu}>Home</Link></li>
             <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/about' onClick={toggleMenu}>About</Link></li>
-            <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/contact' onClick={toggleMenu}>Contact</Link></li>
+            {/* <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/contact' onClick={toggleMenu}>Contact</Link></li> */}
             <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/services' onClick={toggleMenu}>Services</Link></li>
+            <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/career' onClick={toggleMenu}>Career </Link></li>
+
+             <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/contact' onClick={toggleMenu}>Contact</Link></li>
+            {/* <li className="text-gray-700 hover:text-gray-900 py-2 px-3 border-b-2 border-transparent hover:border-gray-800"><Link to='/services' onClick={toggleMenu}>Services</Link></li> */}
           </ul>
         </div>
       </div>
@@ -79,4 +73,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
->>>>>>> 418163b3b48869576aab173d751fd3905c899a52

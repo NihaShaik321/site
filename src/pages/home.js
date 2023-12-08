@@ -3,12 +3,28 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+
 const Home = () => {
   const [startIndex, setStartIndex] = useState(0);
   const handleScroll = (direction) => {
     const newIndex = direction === 'next' ? startIndex + 4 : startIndex - 4;
     setStartIndex(Math.max(0, Math.min(newIndex, totalImages.length - 4)));
   };
+  const certificateImages = ["https://placekitten.com/100/100?image=1",
+  "https://placekitten.com/100/100?image=2",
+  "https://placekitten.com/100/100?image=3",
+  "https://placekitten.com/100/100?image=4",
+  "https://placekitten.com/100/100?image=5",
+  "https://placekitten.com/100/100?image=6",
+  "https://placekitten.com/100/100?image=7",
+  "https://placekitten.com/100/100?image=1",
+  "https://placekitten.com/100/100?image=2",
+  "https://placekitten.com/100/100?image=3",
+  "https://placekitten.com/100/100?image=4",
+  "https://placekitten.com/100/100?image=5",
+  "https://placekitten.com/100/100?image=6",
+  "https://placekitten.com/100/100?image=7",];
+
   const totalImages = [
     "https://placekitten.com/100/100?image=1",
     "https://placekitten.com/100/100?image=2",
@@ -26,6 +42,16 @@ const Home = () => {
     "https://placekitten.com/100/100?image=7",
     // Add more image URLs as needed
   ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   const testimonies = [
     "As a dedicated student using the StudyTap app, I have experienced an unparalleled transformation in my learning journey. The app's intuitive interface and diverse range of study materials have been my constant companions, making every study session efficient and enjoyable. The interactive quizzes and personalized progress tracking have fueled my motivation and helped me stay on top of my academic goals.",
     "The quick brown fox jumps over the lazy dog. This sentence is often used as a typing exercise, as it contains every letter of the alphabet.",
@@ -192,7 +218,7 @@ const Home = () => {
           </button>
         </div>
       </div>  */}
-      <div className="text-center mt-8 mb-8 px-4 lg:px-12">
+      {/* <div className="text-center mt-8 mb-8 px-4 lg:px-12">
         <h1 className="text-4xl mb-8 font-bold">Certifications</h1>
         <div
           className="flex overflow-x-auto space-x-4 pb-8 animate-scroll " // Use the "animate-scroll" class
@@ -210,6 +236,21 @@ const Home = () => {
               />
             </div>
           ))}
+        </div>
+      </div> */}
+        {/* Fourth div with the Slider component */}
+        <div className="w-full text-center relative">
+        <h2 className="text-2xl font-bold">Certificate</h2>
+        <div className="mx-auto w-full max-w-4xl mt-8 rounded-lg overflow-hidden relative" style={{ overflowX: 'auto' }}>
+          <Slider {...settings} scrollbar-hide>
+            {certificateImages.map((image, index) => (
+              <div key={index} className="flex justify-center">
+                <div className="w-full rounded-full overflow-hidden"> 
+                  <img src={image} alt={`Certificate Image ${index + 5}`} className="w-1/2 h-auto object-cover rounded-full" />
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
 

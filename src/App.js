@@ -7,6 +7,7 @@ import Home from './pages/home'
 import About from './pages/about'
 import Contact from './pages/contact'
 import Services from './pages/services'
+import Carrer from './pages/carrer'
 const App = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const App = () => {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/services" element={<Services />} />
+          <Route exact path="/career" element={<Carrer />} />
 
         </Routes>
         
